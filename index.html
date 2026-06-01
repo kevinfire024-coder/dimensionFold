@@ -1,57 +1,51 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>摺維者 | 電影募資互動企劃</title>
+  <title>摺維者 | 電影互動行銷企劃</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <canvas id="dimension-canvas" aria-hidden="true"></canvas>
-
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="摺維者首頁">
-      <span class="brand-mark"></span>
       <span>摺維者</span>
     </a>
     <nav class="nav-links" aria-label="主要導覽">
       <a href="#funding">籌資</a>
+      <a href="#funding">進度</a>
       <a href="#characters">互動</a>
       <a href="#marketing">行銷</a>
       <a href="#world">世界觀</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero-section">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">高維空間摺疊電影計畫</p>
           <h1>摺維者</h1>
           <p class="hero-line">當能量被摺成物質，現實是否仍由人類定義？</p>
           <div class="hero-actions" aria-label="主要行動">
             <a class="button primary" href="#funding">查看籌資進度</a>
+            <a class="button primary" href="#funding">查看製作進度</a>
             <a class="button ghost" href="#characters">啟動角色通訊</a>
           </div>
         </div>
 
         <aside class="funding-console" id="funding" aria-label="籌資進度">
+        <aside class="funding-console" id="funding" aria-label="製作進度">
           <div class="console-topline">
             <span>PROJECT STATUS</span>
             <span id="funding-percent-label">--%</span>
           </div>
           <h2>電影製作籌資</h2>
+          <h2>電影製作進度</h2>
           <div class="funding-numbers">
             <div>
               <span class="label">目前金額</span>
+              <span class="label">目前階段</span>
               <strong id="current-funding">--</strong>
             </div>
             <div>
               <span class="label">目標金額</span>
+              <span class="label">下一步</span>
               <strong id="funding-goal">--</strong>
             </div>
           </div>
           <div class="progress-shell" aria-label="籌資進度條">
+          <div class="progress-shell" aria-label="製作進度條">
             <div class="progress-bar" id="funding-progress"></div>
             <div class="progress-grid"></div>
           </div>
@@ -61,106 +55,15 @@
             <button class="pledge-button" data-pledge="12000">支持 NT$12,000</button>
           </div>
           <p class="microcopy" id="funding-message">每一次支持，都是一次將可能性摺進現實的能量輸入。</p>
+          <p class="microcopy" id="funding-message">支持或贊助功能需建立會員登入、身分驗證與第三方金流後再開放。</p>
         </aside>
       </div>
     </section>
-
-    <section class="section-band">
-      <div class="section-heading">
-        <p class="eyebrow">FILM PACKAGE</p>
-        <h2>企劃核心</h2>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <span class="card-index">01</span>
-          <h3>高概念科幻</h3>
-          <p>以維度摺疊、能量轉物質與高維意識作為主軸，建立華語科幻少見的視覺與敘事辨識度。</p>
-        </article>
-        <article class="feature-card">
-          <span class="card-index">02</span>
-          <h3>情感驅動</h3>
-          <p>林澈追尋失蹤父親的真相，讓抽象科學命題落在親情、選擇與代價之上。</p>
-        </article>
-        <article class="feature-card">
-          <span class="card-index">03</span>
-          <h3>市場延展</h3>
-          <p>結尾保留高維回聲，可延伸續集、影集或觀眾互動事件，擴大後續宣傳週期。</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="interaction-section" id="characters">
-      <div class="section-heading">
-        <p class="eyebrow">CHARACTER SIGNAL</p>
-        <h2>角色文本互動</h2>
-      </div>
-      <div class="terminal-layout">
-        <aside class="character-list" aria-label="選擇角色">
-          <button class="character-button active" data-character="linche">
-            <span>林澈</span>
-            <small>維度物理學家</small>
-          </button>
-          <button class="character-button" data-character="baizhi">
-            <span>白芷</span>
-            <small>高維意識研究員</small>
-          </button>
-          <button class="character-button" data-character="shenyao">
-            <span>沈曜</span>
-            <small>首席工程師</small>
-          </button>
-          <button class="character-button" data-character="linyu">
-            <span>林嶼</span>
-            <small>失蹤科學家</small>
-          </button>
-        </aside>
-
-        <article class="dialogue-panel" aria-live="polite">
-          <div class="dialogue-header">
-            <div>
-              <span class="label">LINKED TO</span>
-              <h3 id="character-name">林澈</h3>
-            </div>
-            <span class="signal-dot">ONLINE</span>
-          </div>
-          <div class="message-stream" id="message-stream"></div>
-          <div class="choice-row" id="choice-row"></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="marketing-section" id="marketing">
-      <div class="section-heading">
-        <p class="eyebrow">BUDGET ALLOCATION</p>
-        <h2>製作與行銷預算比例</h2>
-      </div>
-      <div class="budget-layout">
-        <div class="budget-visual">
-          <div class="budget-ring" id="budget-ring">
-            <span id="marketing-ratio-label">--%</span>
-          </div>
-          <p>行銷預算比例</p>
-        </div>
-        <div class="budget-list" id="budget-list"></div>
-      </div>
-    </section>
-
-    <section class="world-section" id="world">
-      <div class="section-heading">
-        <p class="eyebrow">WORLDVIEW</p>
-        <h2>世界觀與行銷話題</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <span>15 年前</span>
-          <p>第一次高維實驗失控，林嶼消失，成為封鎖高維裂縫的第一個錨點。</p>
-        </div>
-        <div class="timeline-item">
-          <span>現在</span>
-          <p>方舟能源宣稱能以摺疊技術生成物質，實際上正在讓高維意識獲得身體。</p>
         </div>
         <div class="timeline-item">
           <span>上映前互動</span>
           <p>觀眾可透過角色訊息、隱藏檔案與募資解鎖內容，逐步拼出「別打開門」的真相。</p>
+          <p>觀眾可透過角色訊息、隱藏檔案與進度更新內容，逐步拼出「別打開門」的真相。</p>
         </div>
       </div>
     </section>
@@ -168,9 +71,7 @@
 
   <footer class="site-footer">
     <p>《摺維者》電影募資互動企劃網站</p>
+    <p>《摺維者》電影互動行銷企劃網站</p>
     <p>行銷主張：每一次創造，都是一次召喚。</p>
   </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
